@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import  SessionProvider  from "@/lib/SessionProvider";
+import Nav from "@/resources/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,11 +22,13 @@ export default function RootLayout({
       <SessionProvider>
       
       <body className={inter.className}>
+
       <ThemeProvider
        attribute="class"
        defaultTheme="system"
        enableSystem
        disableTransitionOnChange>
+        <Nav/>
         {children}
       </ThemeProvider>
         </body>
