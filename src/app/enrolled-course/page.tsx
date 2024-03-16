@@ -1,10 +1,11 @@
 import prisma from "@/lib/db/prisma"
 import { getServerSession } from "next-auth"
+import { authOptions } from "../api/auth/[...nextauth]/route"
 const page = async () => {
-    const session = await   getServerSession()
+    const session = await   getServerSession(authOptions)
     const userId= session?.user.id
 
-    console.log(userId)
+    // console.log(userId)
     if(!session){
         return
             

@@ -32,7 +32,7 @@ function Nav() {
         
         <div className='p-3 pr-8 drop-shadow-lg'>
           <ModeToggle/>
-          <Link href={"/dashboard"}>Dashboard</Link>
+          {/* <Link href={"/dashboard"}>Dashboard</Link> */}
         </div>
     </div>
   )
