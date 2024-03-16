@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
@@ -11,6 +13,7 @@ import {
   import { useRouter } from 'next/navigation'
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../api/auth/[...nextauth]/route';
+import Link from 'next/link'
   
 
 async function page() {
@@ -21,9 +24,11 @@ async function page() {
         <div>
         <Breadcrumb>
   <BreadcrumbList>
-
+    
     <BreadcrumbItem>
-      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    <BreadcrumbLink asChild>
+        <Link href="/">Home</Link>
+      </BreadcrumbLink>
     </BreadcrumbItem>
 
     <BreadcrumbSeparator />
