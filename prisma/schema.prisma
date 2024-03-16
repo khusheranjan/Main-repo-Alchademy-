@@ -11,7 +11,7 @@ model User {
   id             String    @id @default(cuid())
   name           String?
   hashedPassword String?
-  email          String?   @unique
+  email          String   @unique
   imgUrl         String?
   emailVerified  DateTime?
   image          String?
@@ -31,7 +31,16 @@ model Course {
   description String
   users       User[]
   chapters    Chapter[]
+  subject     Subject[]
   createdAt   DateTime  @default(now())
+}
+
+model Subject {
+  id      String    @id @default(cuid())
+  title   String
+  chapter Chapter[]
+  Course   Course? @relation(fields: [courseId], references: [id])
+  courseId String?
 }
 
 model Chapter {
@@ -43,6 +52,8 @@ model Chapter {
   pdfLink   String
   quizzes   Quiz[]
   createdAt DateTime @default(now())
+  Subject   Subject? @relation(fields: [subjectId], references: [id])
+  subjectId String?
 }
 
 model Quiz {

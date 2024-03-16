@@ -1,10 +1,12 @@
 "use client"
 
+import { signIn, useSession } from 'next-auth/react'
 import React from 'react'
 
-function Mbutton() {
+ function Mbutton() {
+  // const session = await useSession()
   return (
-    <button className='mainbutton ml-[25%] text-white bg-black mt-14'>Get Started!</button>
+    <button className='mainbutton ml-[25%] text-white bg-black mt-14' onClick={()=>{signIn()}}>Get Started!</button>
   )
 }
 
