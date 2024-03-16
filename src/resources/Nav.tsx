@@ -9,8 +9,10 @@ function Nav() {
   return (
     <div className="background flex justify-between">
         <div className='flex p-2'>
+          <Link className='flex p-2' href={'/'}>
         <Image className=' w-16' src={Logo} alt="alchademy" />
         <h1 className='pt-2 pl-1 text-2xl font-bold text-[#FF5A1E]'>ALCHADEMY</h1>
+        </Link>
         </div>
 
         <div className='  py-5 font-medium'>
@@ -30,6 +32,7 @@ function Nav() {
         
         <div className='p-3 pr-8 drop-shadow-lg'>
           <ModeToggle/>
+          <Link href={"/dashboard"}>Dashboard</Link>
         </div>
     </div>
   )

@@ -10,13 +10,16 @@ import {
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react';
 import prisma from '@/lib/db/prisma';  
+// import { EnrollinCourse } from '../actions/EnrollCourse';
+import EnrollButton from './EnrollButton';
 
 async function page() {
-    const course= await prisma.course.findMany();
+    const courses= await prisma.course.findMany();
+    
     return (
         <div className='m-6'>
             <div className=' flex flex-wrap '>
-            {course.map((course)=>{
+            {courses.map((course)=>{
                 return(
                     <Card key={course.id} className='w-1/2 pr-2 mb-4'>
                 <CardHeader>
@@ -24,12 +27,7 @@ async function page() {
                     <CardDescription className=''>{course.description} </CardDescription>
                 </CardHeader>
                 <CardFooter>
-                    <Button className='text-md ' >
-                        Enroll
-                        <div className='pl-1'>
-                            <ArrowRight />
-                        </div>
-                    </Button>
+                  <EnrollButton {...course}/>  
                 </CardFooter>
             </Card>
                 )
