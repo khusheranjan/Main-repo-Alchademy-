@@ -18,10 +18,13 @@ async function page() {
     
     return (
         <div className='m-6'>
-            <div className=' flex flex-wrap '>
-            {courses.map((course)=>{
+
+            <div className=' flex flex-wrap justify-center'>
+            {course.map((course)=>{
+        
+
                 return(
-                    <Card key={course.id} className='w-1/2 pr-2 mb-4'>
+                    <Card key={course.id} className='w-1/3 pr-2 mb-8 mx-10'>
                 <CardHeader>
                     <CardTitle>{course.title}</CardTitle>
                     <CardDescription className=''>{course.description} </CardDescription>

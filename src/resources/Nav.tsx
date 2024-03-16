@@ -21,10 +21,10 @@ function Nav() {
             <Link  href="#">Courses</Link>
             </li>
             <li className='px-6 hover:underline hover:text-[#FF5A1E]'>
-            <Link  href="#">Courses</Link>
+            <Link  href="#">Features</Link>
             </li>
             <li className='px-6 hover:underline hover:text-[#FF5A1E]'>
-            <Link  href="#">Courses</Link>
+            <Link  href="#">Dashboard</Link>
             </li>
           </ul>
         </div>
