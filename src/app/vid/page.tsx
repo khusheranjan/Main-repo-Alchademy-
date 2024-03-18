@@ -1,10 +1,7 @@
 import React from 'react'
-import prisma from '@/lib/db/prisma';
 import { Button } from '@/components/ui/button';
 
-async function page() {
-    const chapters= await prisma.chapter.findMany();
-    const chapter = chapters[0];
+ function page() {
   return (
     <div>
                         <div>
