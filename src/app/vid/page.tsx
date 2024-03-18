@@ -7,20 +7,13 @@ async function page() {
     const chapter = chapters[0];
   return (
     <div>
-        {chapters.map((chapters)=>{
-                return(
-                    <div>
                         <div>
                             <video src=""></video>
-                            <h1>{chapter.title}</h1>
                             </div>
                             <div>
                                 <h2>Take quiz to test your knowledge!</h2>
                                 <Button>Take Quiz</Button>
                             </div>
-                    </div>
-         )
-        })}
     </div>
   )
 }
